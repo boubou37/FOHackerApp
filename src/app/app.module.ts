@@ -5,18 +5,23 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SolverComponent } from './solver/solver.component';
+import { LazymodeComponent } from './lazymode/lazymode.component';
+import { ManualmodeComponent } from './manualmode/manualmode.component';
+import {SolverService} from "./solver/solver.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    SolverComponent
+    SolverComponent,
+    LazymodeComponent,
+    ManualmodeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [SolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

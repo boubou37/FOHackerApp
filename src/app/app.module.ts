@@ -8,6 +8,7 @@ import { SolverComponent } from './solver/solver.component';
 import { LazymodeComponent } from './lazymode/lazymode.component';
 import { ManualmodeComponent } from './manualmode/manualmode.component';
 import {SolverService} from "./solver/solver.service";
+import {AlertModule} from 'ng2-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {SolverService} from "./solver/solver.service";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AlertModule.forRoot()
   ],
   providers: [SolverService],
   bootstrap: [AppComponent]

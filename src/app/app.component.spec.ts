@@ -1,13 +1,20 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import {ManualmodeComponent} from "./manualmode/manualmode.component";
+import {LazymodeComponent} from "./lazymode/lazymode.component";
+import {AlertConfig, AlertModule} from "ng2-bootstrap";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        ManualmodeComponent,
+        LazymodeComponent
       ],
+      imports: [AlertModule],
+      providers: [AlertConfig]
     }).compileComponents();
   }));
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ManualmodeComponent} from './manualmode/manualmode.component'
 
 @Component({
   selector: 'app-root',

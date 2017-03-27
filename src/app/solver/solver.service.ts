@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class SolverService {
 
+  words: string[] = [];
+  debug: string="debug";
+  hacking: boolean = false;
   constructor() { }
 
   countMatches(reference: string, guess: string) : number {

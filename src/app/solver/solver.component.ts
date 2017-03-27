@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {SolverService} from "./solver.service";
 @Component({
   selector: 'app-solver',
   templateUrl: './solver.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolverComponent implements OnInit {
 
-  constructor() { }
+  constructor(public solverService: SolverService) { }
 
   ngOnInit() {
   }

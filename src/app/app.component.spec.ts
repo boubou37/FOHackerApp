@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import {ManualmodeComponent} from "./manualmode/manualmode.component";
 import {LazymodeComponent} from "./lazymode/lazymode.component";
 import {AlertConfig, AlertModule} from "ng2-bootstrap";
+import {FormsModule} from "@angular/forms";
+import {SolverComponent} from "./solver/solver.component";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,9 +13,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         ManualmodeComponent,
-        LazymodeComponent
+        LazymodeComponent,
+        SolverComponent
       ],
-      imports: [AlertModule],
+      imports: [AlertModule,
+      FormsModule],
       providers: [AlertConfig]
     }).compileComponents();
   }));

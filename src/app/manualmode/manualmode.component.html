@@ -1,3 +1,25 @@
-aaaaaa
-
- <button type="button" class="btn btn-default">Default</button>
+<div class="container-fluid">
+<form #wordform="ngForm" (submit)="addWord(entry.value)">
+  <div class="form-group">
+    <input #entry required type="text" placeholder="Enter word">
+    <button type="submit" class="btn btn-info">Add word</button>
+  </div>
+</form>
+</div>
+<div class="container-fluid">
+<form (submit)="initHack()">
+  <div class="col-sm-2 form-group">
+    <table class="table">
+      <th>Words</th>
+      <tr *ngFor="let word of getWords(); let i = index;">
+        <td contenteditable="true">{{word}}</td>
+        <td><button type="button" class="btn btn-danger btn-xs" (click)="words.splice(i,1)"><span class="glyphicon glyphicon-remove"></span></button></td>
+      </tr>
+    </table>
+    <button type="submit" class="btn btn-success">Validate</button>
+  </div>
+</form>
+</div>
+<div class="container-fluid" *ngIf="isHacking()">
+  <app-solver></app-solver>
+</div>

@@ -11,21 +11,25 @@ import {NgControl} from "@angular/forms";
 })
 export class ManualmodeComponent implements OnInit {
 
-  constructor(public solverService: SolverService) { }
+  words: string[];
+  constructor(public solverService: SolverService) {
+    this.words=[];
+  }
 
   ngOnInit() {
   }
 
   addWord(word: string): void {
-    this.solverService.words.push(word);
+    this.words.push(word.toUpperCase());
   }
 
   getWords(): string[] {
-    return this.solverService.words;
+    return this.words;
   }
 
   initHack() : void {
     this.solverService.hacking = true;
+    this.solverService.words = this.words;
   }
 
   isHacking(): boolean {

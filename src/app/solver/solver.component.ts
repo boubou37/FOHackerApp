@@ -9,7 +9,18 @@ export class SolverComponent implements OnInit {
 
   constructor(public solverService: SolverService) { }
 
+  words: string[];
+
   ngOnInit() {
+    this.words = this.getWords();
+  }
+
+  getWords() : string[] {
+    return this.solverService.words;
+  }
+
+  filter(words: string[], guess: string, matches: number) {
+    this.solverService.words = this.solverService.keepCandidates(words,guess.toUpperCase(),matches);
   }
 
 }

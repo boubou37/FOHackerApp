@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {SolverService} from "../solver/solver.service";
+import {SolverService} from '../solver/solver.service';
+import {Http} from '@angular/http';
+
 
 @Component({
   selector: 'app-lazymode',
@@ -11,7 +13,7 @@ import {SolverService} from "../solver/solver.service";
 export class LazymodeComponent implements OnInit {
 
   words: string[] = [];
-  constructor(private solver: SolverService) { }
+  constructor(public solver: SolverService, private http: Http) { }
 
   ngOnInit() {
   }

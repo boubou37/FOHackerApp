@@ -28,6 +28,9 @@ module.exports = function (config) {
       reports: [ 'html', 'lcovonly' ],
       fixWebpackSourcePaths: true
     },
+    proxies: {
+      '/api': 'http://fallouthacker.azurewebsites.net/api'
+    },
     angularCli: {
       environment: 'dev'
     },

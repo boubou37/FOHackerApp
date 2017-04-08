@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ManualmodeComponent } from './manualmode.component';
 import {FormsModule} from "@angular/forms";
 import {SolverComponent} from "../solver/solver.component";
+import {HttpModule} from '@angular/http';
 
 describe('ManualmodeComponent', () => {
   let component: ManualmodeComponent;
@@ -12,7 +13,8 @@ describe('ManualmodeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ ManualmodeComponent,
       SolverComponent],
-      imports: [FormsModule]
+      imports: [FormsModule,
+      HttpModule]
     })
     .compileComponents();
   }));

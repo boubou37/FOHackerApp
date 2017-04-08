@@ -1,6 +1,6 @@
 {
-  "/api/*": {
-    "target": "http://fallouthacker.azurewebsites.net",
+  "/contacts": {
+    "target": "http://bordeldemerde.azurewebsites.net/contacts",
     "secure": false
   }
 }

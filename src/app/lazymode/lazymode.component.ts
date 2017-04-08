@@ -13,7 +13,9 @@ import {Http} from '@angular/http';
 export class LazymodeComponent implements OnInit {
 
   words: string[] = [];
-  constructor(public solver: SolverService, private http: Http) { }
+  constructor(public solver: SolverService, private http: Http) {
+    //this.solver.getWords('http://fallouthacker.azurewebsites.net/api/values').subscribe(x => this.words = x);
+  }
 
   ngOnInit() {
   }

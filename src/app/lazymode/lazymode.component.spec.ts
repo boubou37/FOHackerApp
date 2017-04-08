@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LazymodeComponent } from './lazymode.component';
+import {HttpModule} from '@angular/http';
 
 describe('LazymodeComponent', () => {
   let component: LazymodeComponent;
@@ -8,6 +9,7 @@ describe('LazymodeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpModule],
       declarations: [ LazymodeComponent ]
     })
     .compileComponents();

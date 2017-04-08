@@ -20,7 +20,11 @@ export class SolverComponent implements OnInit {
   }
 
   filter(words: string[], guess: string, matches: number) {
-    this.solverService.words = this.solverService.keepCandidates(words, guess.toUpperCase(), matches);
+    this.words = this.solverService.keepCandidates(words, guess.toUpperCase(), matches);
+  }
+
+  resetSolver() {
+    this.words = this.getWords();
   }
 
 }

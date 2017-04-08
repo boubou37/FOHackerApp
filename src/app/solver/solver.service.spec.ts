@@ -1,11 +1,14 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { SolverService } from './solver.service';
+import {HttpModule} from '@angular/http';
+import global = require('../config/global');
 
 describe('SolverService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SolverService]
+      providers: [SolverService],
+      imports: [HttpModule]
     });
   });
 
@@ -93,6 +96,13 @@ describe('SolverService', () => {
     ];
     expect(expected).toEqual(result);
   }));
+
+  it('words API loads correctly', inject([SolverService], (service: SolverService) => {
+    expect(service.words.length).toBeGreaterThan(4000);
+  }));
+
+
+
 
 
 });

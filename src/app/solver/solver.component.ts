@@ -8,6 +8,7 @@ import {SolverService} from './solver.service';
 export class SolverComponent implements OnInit {
 
   words: string[];
+  visible = false; //for performance issues
 
   constructor(public solverService: SolverService) { }
 
@@ -21,10 +22,12 @@ export class SolverComponent implements OnInit {
 
   filter(words: string[], guess: string, matches: number) {
     this.words = this.solverService.keepCandidates(words, guess.toUpperCase(), matches);
+    this.visible = true;
   }
 
   resetSolver() {
     this.words = this.getWords();
+    this.visible = false;
   }
 
 }
